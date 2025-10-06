@@ -100,16 +100,16 @@ export default function HomeScreen({ navigation }: Props) {
     Alert.alert('Removed', 'Menu item removed successfully!');
   };
 
-  // Calculate average prices by course
+  // Calculating average prices by course
   const averagePrices = useMemo(() => {
     const courseStats: { [key: string]: { total: number; count: number; average: number } } = {};
     
-    // Initialize all courses
+    // Initialize all course
     COURSES.forEach(course => {
       courseStats[course] = { total: 0, count: 0, average: 0 };
     });
 
-    // Calculate totals and counts
+    // Calculate total and count
     menuItems.forEach(item => {
       if (courseStats[item.course]) {
         courseStats[item.course].total += item.price;
@@ -117,7 +117,7 @@ export default function HomeScreen({ navigation }: Props) {
       }
     });
 
-    // Calculate averages
+    // Calculating averages
     COURSES.forEach(course => {
       if (courseStats[course].count > 0) {
         courseStats[course].average = courseStats[course].total / courseStats[course].count;
@@ -143,15 +143,15 @@ export default function HomeScreen({ navigation }: Props) {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+   
       <Text style={styles.header}>Christoffel's Menu</Text>
 
-      {/* Total Menu Items */}
+      {/* Total  Items */}
       <View style={styles.summaryContainer}>
         <Text style={styles.summaryText}>Total Menu Items: {menuItems.length}</Text>
       </View>
 
-      {/* Average Prices by Course - NEW REQUIREMENT */}
+      {/* Average Prices by Course */}
       <View style={styles.averageContainer}>
         <Text style={styles.averageHeader}>Average Prices by Course</Text>
         {COURSES.map(course => (
@@ -169,7 +169,7 @@ export default function HomeScreen({ navigation }: Props) {
         )}
       </View>
 
-      {/* Navigation Buttons */}
+      {/* Nav Button */}
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.primaryButton}
@@ -186,7 +186,7 @@ export default function HomeScreen({ navigation }: Props) {
         </TouchableOpacity>
       </View>
 
-      {/* Menu Items List */}
+      {/* Menu List */}
       <Text style={styles.menuHeader}>Complete Menu ({menuItems.length} items)</Text>
       <FlatList
         data={menuItems}

@@ -42,7 +42,7 @@ export default function AddMenuItemScreen({ navigation, route }: Props) {
       price: numericPrice,
     });
 
-    // Reset form
+    // Reseting form
     setName('');
     setDescription('');
     setCourse(COURSES[0]);
