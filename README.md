@@ -70,3 +70,9 @@ Dynamic filtering by course category
 Shows filtered results count
 
 Course statistics display
+
+References :
+Academind. 2023. React Native Tutorial for Beginners. Available at: https://www.youtube.com/watch?v=0-S5a0eXPoc [Accessed 27 September 2024].
+Expo. 2024. Expo Documentation: Getting Started. Available at: https://docs.expo.dev/ [Accessed 27 September 2024].
+W3Schools (no date) React tutorial. Available at: https://www.w3schools.com/REACT/DEFAULT.ASP (Accessed: 7 October 2024).
+Meta Open Source (2024) React Native documentation: Tutorial. Available at: https://reactnative.dev/docs/tutorial (Accessed: 7 October 2024).
